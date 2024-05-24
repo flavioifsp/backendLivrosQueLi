@@ -18,5 +18,4 @@ model Filme {
   id        Int    @id @default(autoincrement())
   nome      String @db.VarChar(33)
   imagem    String @db.VarChar(255)
-  selecionado Int
 }
