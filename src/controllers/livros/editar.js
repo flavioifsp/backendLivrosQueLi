@@ -7,7 +7,7 @@ import { prisma } from "../../prisma.js";
  */
 export default async function editar(req, res) {
     const { id } = req.params;
-    const { nome, imagem, selecionado } = req.body;
+    const { nome, imagem } = req.body;
     
     try {
         const livro = await prisma.livro.update({
@@ -15,7 +15,6 @@ export default async function editar(req, res) {
             data: {
                 nome,
                 imagem,
-                selecionado
             },
         });
 
